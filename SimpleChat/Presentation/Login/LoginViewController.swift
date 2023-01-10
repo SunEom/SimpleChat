@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
     
     private var vm: LoginViewModel! = nil
+    private let disposeBag = DisposeBag()
     
     private let stackView = UIStackView()
     private let titleLabel = UILabel()
@@ -37,10 +40,18 @@ class LoginViewController: UIViewController {
     }
     
     private func bind() {
-        
+        signInBtn.rx.tap
+            .asDriver()
+            .drive(onNext: {
+                self.navigationController?.pushViewController(SignInViewController(SignInViewModel()), animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {
+        
+        view.backgroundColor = .black
+        view.addTapGesture()
         
         stackView.axis = .vertical
         stackView.distribution = .fill
@@ -97,6 +108,7 @@ class LoginViewController: UIViewController {
             
             emailTextField.heightAnchor.constraint(equalToConstant: 40),
             pwdTextField.heightAnchor.constraint(equalToConstant: 40),
+            
         ].forEach{ $0.isActive = true }
     
     }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,13 @@
 		BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C4296CF68B00889649 /* TextField.swift */; };
 		BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C7296D058200889649 /* SignInViewModel.swift */; };
 		BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C9296D059600889649 /* SignInViewController.swift */; };
+		BFE5101B296D1341006CD786 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE5101A296D1341006CD786 /* GoogleService-Info.plist */; };
+		BFE5101E296D1569006CD786 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5101D296D1569006CD786 /* UiView.swift */; };
+		DA9C606EC222CFBB2F35CAD3 /* Pods_SimpleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.release.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.release.xcconfig"; sourceTree = "<group>"; };
 		BF5EF0A4296CF20B00889649 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5EF0A7296CF20B00889649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,11 @@
 		BF5EF0C4296CF68B00889649 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BF5EF0C7296D058200889649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0C9296D059600889649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BFE5101A296D1341006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFE5101C296D134D006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFE5101D296D1569006CD786 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB501C5F324756389C27502 /* Pods-SimpleChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9C606EC222CFBB2F35CAD3 /* Pods_SimpleChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A989E9DC9127ACBEFD0FBC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEB501C5F324756389C27502 /* Pods-SimpleChat.debug.xcconfig */,
+				5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B610FAC6BF0BC3245118FDD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF5EF09B296CF20B00889649 = {
 			isa = PBXGroup;
 			children = (
 				BF5EF0A6296CF20B00889649 /* SimpleChat */,
 				BF5EF0A5296CF20B00889649 /* Products */,
+				1A989E9DC9127ACBEFD0FBC9 /* Pods */,
+				B610FAC6BF0BC3245118FDD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +91,11 @@
 		BF5EF0A6296CF20B00889649 /* SimpleChat */ = {
 			isa = PBXGroup;
 			children = (
-				BF5EF0C3296CF68200889649 /* Util */,
 				BF5EF0BD296CF27600889649 /* Delegate */,
 				BF5EF0BC296CF27100889649 /* Presentation */,
+				BF5EF0C3296CF68200889649 /* Util */,
 				BF5EF0BB296CF26700889649 /* Supporting */,
+				BFE5101C296D134D006CD786 /* GoogleService-Info.plist */,
 			);
 			path = SimpleChat;
 			sourceTree = "<group>";
@@ -73,6 +103,7 @@
 		BF5EF0BB296CF26700889649 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5101A296D1341006CD786 /* GoogleService-Info.plist */,
 				BF5EF0B0296CF20C00889649 /* Assets.xcassets */,
 				BF5EF0B2296CF20C00889649 /* LaunchScreen.storyboard */,
 				BF5EF0B5296CF20C00889649 /* Info.plist */,
@@ -111,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5EF0C4296CF68B00889649 /* TextField.swift */,
+				BFE5101D296D1569006CD786 /* UiView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -131,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5EF0B8296CF20C00889649 /* Build configuration list for PBXNativeTarget "SimpleChat" */;
 			buildPhases = (
+				32B016CF0F3DA0544AF6F7C1 /* [CP] Check Pods Manifest.lock */,
 				BF5EF0A0296CF20B00889649 /* Sources */,
 				BF5EF0A1296CF20B00889649 /* Frameworks */,
 				BF5EF0A2296CF20B00889649 /* Resources */,
+				DB1D03783A22F850430A0FA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,7 +194,7 @@
 				};
 			};
 			buildConfigurationList = BF5EF09F296CF20B00889649 /* Build configuration list for PBXProject "SimpleChat" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -184,16 +218,60 @@
 			files = (
 				BF5EF0B4296CF20C00889649 /* LaunchScreen.storyboard in Resources */,
 				BF5EF0B1296CF20C00889649 /* Assets.xcassets in Resources */,
+				BFE5101B296D1341006CD786 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32B016CF0F3DA0544AF6F7C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB1D03783A22F850430A0FA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleChat/Pods-SimpleChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleChat/Pods-SimpleChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleChat/Pods-SimpleChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF5EF0A0296CF20B00889649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE5101E296D1569006CD786 /* UiView.swift in Sources */,
 				BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */,
 				BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */,
 				BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */,
@@ -334,6 +412,7 @@
 		};
 		BF5EF0B9296CF20C00889649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB501C5F324756389C27502 /* Pods-SimpleChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +440,7 @@
 		};
 		BF5EF0BA296CF20C00889649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

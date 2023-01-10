@@ -47,6 +47,9 @@ class SignInViewController: UIViewController {
     
     private func attribute() {
         
+        view.backgroundColor = .black
+        view.addTapGesture()
+        
         titleLabel.text = "Sign In"
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 30, weight: .bold)
