@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A7296CF20B00889649 /* AppDelegate.swift */; };
 		BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */; };
-		BF5EF0AC296CF20B00889649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0AB296CF20B00889649 /* ViewController.swift */; };
-		BF5EF0AF296CF20B00889649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5EF0AD296CF20B00889649 /* Main.storyboard */; };
 		BF5EF0B1296CF20C00889649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5EF0B0296CF20C00889649 /* Assets.xcassets */; };
 		BF5EF0B4296CF20C00889649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5EF0B2296CF20C00889649 /* LaunchScreen.storyboard */; };
+		BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0BF296CF45400889649 /* LoginViewController.swift */; };
+		BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C1296CF57000889649 /* LoginViewModel.swift */; };
+		BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C4296CF68B00889649 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF5EF0A4296CF20B00889649 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5EF0A7296CF20B00889649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF5EF0AB296CF20B00889649 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF5EF0AE296CF20B00889649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5EF0B0296CF20C00889649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5EF0B3296CF20C00889649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5EF0B5296CF20C00889649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5EF0BF296CF45400889649 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF5EF0C1296CF57000889649 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BF5EF0C4296CF68B00889649 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		BF5EF0A6296CF20B00889649 /* SimpleChat */ = {
 			isa = PBXGroup;
 			children = (
-				BF5EF0A7296CF20B00889649 /* AppDelegate.swift */,
-				BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */,
-				BF5EF0AB296CF20B00889649 /* ViewController.swift */,
-				BF5EF0AD296CF20B00889649 /* Main.storyboard */,
+				BF5EF0C3296CF68200889649 /* Util */,
+				BF5EF0BD296CF27600889649 /* Delegate */,
+				BF5EF0BC296CF27100889649 /* Presentation */,
+				BF5EF0BB296CF26700889649 /* Supporting */,
+			);
+			path = SimpleChat;
+			sourceTree = "<group>";
+		};
+		BF5EF0BB296CF26700889649 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
 				BF5EF0B0296CF20C00889649 /* Assets.xcassets */,
 				BF5EF0B2296CF20C00889649 /* LaunchScreen.storyboard */,
 				BF5EF0B5296CF20C00889649 /* Info.plist */,
 			);
-			path = SimpleChat;
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		BF5EF0BC296CF27100889649 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BF5EF0BE296CF44400889649 /* Login */,
+				BF5EF0C1296CF57000889649 /* LoginViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BF5EF0BD296CF27600889649 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BF5EF0A7296CF20B00889649 /* AppDelegate.swift */,
+				BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BF5EF0BE296CF44400889649 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF5EF0BF296CF45400889649 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF5EF0C3296CF68200889649 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BF5EF0C4296CF68B00889649 /* TextField.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +170,6 @@
 			files = (
 				BF5EF0B4296CF20C00889649 /* LaunchScreen.storyboard in Resources */,
 				BF5EF0B1296CF20C00889649 /* Assets.xcassets in Resources */,
-				BF5EF0AF296CF20B00889649 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5EF0AC296CF20B00889649 /* ViewController.swift in Sources */,
+				BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */,
+				BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */,
+				BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */,
 				BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */,
 				BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF5EF0AD296CF20B00889649 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF5EF0AE296CF20B00889649 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF5EF0B2296CF20C00889649 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +325,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KB3R84Q4BQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SimpleChat/Info.plist;
+				INFOPLIST_FILE = SimpleChat/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +352,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KB3R84Q4BQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SimpleChat/Info.plist;
+				INFOPLIST_FILE = SimpleChat/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
