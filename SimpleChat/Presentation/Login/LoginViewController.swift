@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxRelay
 
 class LoginViewController: UIViewController {
     
@@ -46,6 +47,39 @@ class LoginViewController: UIViewController {
                 self.navigationController?.pushViewController(SignInViewController(SignInViewModel()), animated: true)
             })
             .disposed(by: disposeBag)
+        
+        emailTextField.rx.text
+            .orEmpty
+            .bind(to: vm.emailData)
+            .disposed(by: disposeBag)
+        
+        pwdTextField.rx.text
+            .orEmpty
+            .bind(to: vm.pwdData)
+            .disposed(by: disposeBag)
+        
+        loginBtn.rx.tap
+            .bind(to: vm.loginBtnTap)
+            .disposed(by: disposeBag)
+        
+        vm.loginResult
+            .observe(on: MainScheduler.instance)
+                        .subscribe(onNext: { result in
+                            if result.isSuccess {
+                                let alert = UIAlertController(title: "성공", message: result.msg, preferredStyle: .alert)
+                                let action = UIAlertAction(title: "확인", style: .default) { _ in
+                                    self.navigationController?.popViewController(animated: true)
+                                }
+                                alert.addAction(action)
+                                self.present(alert, animated: true)
+                            } else {
+                                let alert = UIAlertController(title: "실패", message: result.msg, preferredStyle: .alert)
+                                let action = UIAlertAction(title: "확인", style: .default)
+                                alert.addAction(action)
+                                self.present(alert, animated: true)
+                            }
+                        })
+                        .disposed(by: disposeBag)
     }
     
     private func attribute() {

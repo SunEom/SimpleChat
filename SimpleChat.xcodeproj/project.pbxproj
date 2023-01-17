@@ -16,6 +16,8 @@
 		BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C4296CF68B00889649 /* TextField.swift */; };
 		BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C7296D058200889649 /* SignInViewModel.swift */; };
 		BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C9296D059600889649 /* SignInViewController.swift */; };
+		BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7F92970FF9700067222 /* LogInRepository.swift */; };
+		BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7FB2970FFF500067222 /* LoginNetwork.swift */; };
 		BFE5101B296D1341006CD786 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE5101A296D1341006CD786 /* GoogleService-Info.plist */; };
 		BFE5101E296D1569006CD786 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5101D296D1569006CD786 /* UiView.swift */; };
 		BFE51021296D2173006CD786 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51020296D2173006CD786 /* RequestResult.swift */; };
@@ -37,6 +39,8 @@
 		BF5EF0C4296CF68B00889649 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BF5EF0C7296D058200889649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0C9296D059600889649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BF97D7F92970FF9700067222 /* LogInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRepository.swift; sourceTree = "<group>"; };
+		BF97D7FB2970FFF500067222 /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		BFE5101A296D1341006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFE5101C296D134D006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFE5101D296D1569006CD786 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE51023296D2270006CD786 /* SignInRepository.swift */,
+				BF97D7F92970FF9700067222 /* LogInRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE51026296D2590006CD786 /* SignInNetwork.swift */,
+				BF97D7FB2970FFF500067222 /* LoginNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -309,8 +315,10 @@
 				BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */,
 				BFE51021296D2173006CD786 /* RequestResult.swift in Sources */,
 				BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */,
+				BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */,
 				BFE51027296D2590006CD786 /* SignInNetwork.swift in Sources */,
 				BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */,
+				BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */,
 				BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */,
 				BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */,
 				BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */,
