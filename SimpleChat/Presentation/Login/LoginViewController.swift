@@ -66,12 +66,10 @@ class LoginViewController: UIViewController {
             .observe(on: MainScheduler.instance)
                         .subscribe(onNext: { result in
                             if result.isSuccess {
-                                let alert = UIAlertController(title: "성공", message: result.msg, preferredStyle: .alert)
-                                let action = UIAlertAction(title: "확인", style: .default) { _ in
-                                    self.navigationController?.popViewController(animated: true)
-                                }
-                                alert.addAction(action)
-                                self.present(alert, animated: true)
+                                let vc =  MainViewController()
+                                vc.modalPresentationStyle = .fullScreen
+                                vc.modalTransitionStyle = .crossDissolve
+                                self.present(vc, animated: true)
                             } else {
                                 let alert = UIAlertController(title: "실패", message: result.msg, preferredStyle: .alert)
                                 let action = UIAlertAction(title: "확인", style: .default)

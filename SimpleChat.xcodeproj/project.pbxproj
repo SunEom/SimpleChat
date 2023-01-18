@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF23D9B22976339D00DE0942 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B12976339D00DE0942 /* MainViewController.swift */; };
+		BF23D9B62976341300DE0942 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B52976341300DE0942 /* FriendListViewController.swift */; };
+		BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */; };
+		BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */; };
 		BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A7296CF20B00889649 /* AppDelegate.swift */; };
 		BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */; };
 		BF5EF0B1296CF20C00889649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5EF0B0296CF20C00889649 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 		BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C4296CF68B00889649 /* TextField.swift */; };
 		BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C7296D058200889649 /* SignInViewModel.swift */; };
 		BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0C9296D059600889649 /* SignInViewController.swift */; };
+		BF8672A8297776760040EB48 /* FriendSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672A7297776760040EB48 /* FriendSearchViewModel.swift */; };
+		BF8672AC29777C930040EB48 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AB29777C930040EB48 /* FriendRepository.swift */; };
+		BF8672AE29777D2B0040EB48 /* FriendNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */; };
+		BF8672B029778E0E0040EB48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AF29778E0E0040EB48 /* User.swift */; };
 		BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7F92970FF9700067222 /* LogInRepository.swift */; };
 		BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7FB2970FFF500067222 /* LoginNetwork.swift */; };
 		BFE5101B296D1341006CD786 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE5101A296D1341006CD786 /* GoogleService-Info.plist */; };
@@ -28,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.release.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.release.xcconfig"; sourceTree = "<group>"; };
+		BF23D9B12976339D00DE0942 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BF23D9B52976341300DE0942 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
+		BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0A4296CF20B00889649 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5EF0A7296CF20B00889649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,10 @@
 		BF5EF0C4296CF68B00889649 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BF5EF0C7296D058200889649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0C9296D059600889649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BF8672A7297776760040EB48 /* FriendSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewModel.swift; sourceTree = "<group>"; };
+		BF8672AB29777C930040EB48 /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendNetwork.swift; sourceTree = "<group>"; };
+		BF8672AF29778E0E0040EB48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF97D7F92970FF9700067222 /* LogInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRepository.swift; sourceTree = "<group>"; };
 		BF97D7FB2970FFF500067222 /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		BFE5101A296D1341006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -78,6 +94,34 @@
 				D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF23D9AE2976330F00DE0942 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF23D9B4297633FE00DE0942 /* FriendSearch */,
+				BF23D9B3297633ED00DE0942 /* FriendList */,
+				BF23D9B12976339D00DE0942 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BF23D9B3297633ED00DE0942 /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				BF23D9B52976341300DE0942 /* FriendListViewController.swift */,
+				BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */,
+			);
+			path = FriendList;
+			sourceTree = "<group>";
+		};
+		BF23D9B4297633FE00DE0942 /* FriendSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */,
+				BF8672A7297776760040EB48 /* FriendSearchViewModel.swift */,
+			);
+			path = FriendSearch;
 			sourceTree = "<group>";
 		};
 		BF5EF09B296CF20B00889649 = {
@@ -127,6 +171,7 @@
 		BF5EF0BC296CF27100889649 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BF23D9AE2976330F00DE0942 /* Main */,
 				BF5EF0C6296D057600889649 /* SignIn */,
 				BF5EF0BE296CF44400889649 /* Login */,
 			);
@@ -173,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE51020296D2173006CD786 /* RequestResult.swift */,
+				BF8672AF29778E0E0040EB48 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -182,6 +228,7 @@
 			children = (
 				BFE51023296D2270006CD786 /* SignInRepository.swift */,
 				BF97D7F92970FF9700067222 /* LogInRepository.swift */,
+				BF8672AB29777C930040EB48 /* FriendRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -191,6 +238,7 @@
 			children = (
 				BFE51026296D2590006CD786 /* SignInNetwork.swift */,
 				BF97D7FB2970FFF500067222 /* LoginNetwork.swift */,
+				BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -310,19 +358,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */,
 				BFE5101E296D1569006CD786 /* UiView.swift in Sources */,
 				BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */,
 				BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */,
 				BFE51021296D2173006CD786 /* RequestResult.swift in Sources */,
 				BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */,
+				BF23D9B62976341300DE0942 /* FriendListViewController.swift in Sources */,
 				BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */,
+				BF8672AE29777D2B0040EB48 /* FriendNetwork.swift in Sources */,
 				BFE51027296D2590006CD786 /* SignInNetwork.swift in Sources */,
+				BF23D9B22976339D00DE0942 /* MainViewController.swift in Sources */,
 				BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */,
+				BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */,
+				BF8672A8297776760040EB48 /* FriendSearchViewModel.swift in Sources */,
 				BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */,
 				BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */,
 				BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */,
 				BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */,
+				BF8672AC29777C930040EB48 /* FriendRepository.swift in Sources */,
 				BFE51024296D2270006CD786 /* SignInRepository.swift in Sources */,
+				BF8672B029778E0E0040EB48 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
