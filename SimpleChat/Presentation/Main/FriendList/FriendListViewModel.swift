@@ -14,7 +14,7 @@ class FriendListViewModel {
     let friends = BehaviorSubject(value: [User]())
     
     init(_ repo: FriendRepository = FriendRepository()) {
-        repo.getAllUser()
+        repo.getFriends()
             .bind(to: friends)
             .disposed(by: disposeBag)
     }

@@ -15,8 +15,12 @@ class FriendRepository {
         return network.requestUserList()
     }
     
+    func getFriends() -> Observable<[User]> {
+        return network.requestFriendList()
+    }
+    
     func searchById(_ id: String) -> Observable<[User]> {
         return network.requestUserList()
-            .map { $0.filter{ $0.nickname.lowercased().contains(id.lowercased()) } }
+            .map { $0.filter{ $0.uid.lowercased().contains(id.lowercased()) } }
     }
 }

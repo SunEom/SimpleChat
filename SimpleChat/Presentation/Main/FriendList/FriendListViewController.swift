@@ -38,7 +38,7 @@ class FriendListViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .bind(to: tableView.rx.items) { tv, row, friend in
                 let cell = UITableViewCell()
-                cell.textLabel?.text = friend.nickname
+                cell.textLabel?.text = friend.uid
                 cell.accessoryType = .disclosureIndicator
                 return cell
             }

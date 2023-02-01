@@ -48,7 +48,7 @@ class FriendSearchViewController: UIViewController {
         vm.list
             .bind(to: tableView.rx.items) { tv, row, item in
                 let cell = UITableViewCell()
-                cell.textLabel?.text = item.nickname
+                cell.textLabel?.text = item.uid
                 return cell
             }
             .disposed(by: disposeBag)
