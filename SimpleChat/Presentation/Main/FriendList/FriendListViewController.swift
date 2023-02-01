@@ -27,10 +27,13 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         bind()
-        attribute()
         layout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        attribute()
     }
     
     private func bind() {
@@ -39,19 +42,37 @@ class FriendListViewController: UIViewController {
             .bind(to: tableView.rx.items) { tv, row, friend in
                 let cell = UITableViewCell()
                 cell.textLabel?.text = friend.uid
+                cell.textLabel?.textColor = .black
                 cell.accessoryType = .disclosureIndicator
+                cell.backgroundColor = .white
                 return cell
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: {
+                self.tableView.cellForRow(at: $0)?.isSelected = false
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .withLatestFrom(vm.friends) { $1[$0] }
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: {
+                self.navigationController?.pushViewController(ChatRoomViewController(ChatRoomViewModel(friend: $0)), animated: true)
+            })
+            .disposed(by: disposeBag)
+            
     }
     
     
     private func attribute() {
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         view.backgroundColor = .white
         self.navigationItem.title = "Friends"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        
+        tableView.backgroundColor = .white
     }
     
     private func layout() {

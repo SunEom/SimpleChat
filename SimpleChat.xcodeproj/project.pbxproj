@@ -11,6 +11,8 @@
 		BF23D9B62976341300DE0942 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B52976341300DE0942 /* FriendListViewController.swift */; };
 		BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */; };
 		BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */; };
+		BF4760D9298A545C005E4F4A /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4760D8298A545C005E4F4A /* ChatRoomViewController.swift */; };
+		BF4760DB298A5465005E4F4A /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4760DA298A5465005E4F4A /* ChatRoomViewModel.swift */; };
 		BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A7296CF20B00889649 /* AppDelegate.swift */; };
 		BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */; };
 		BF5EF0B1296CF20C00889649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5EF0B0296CF20C00889649 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		BF23D9B52976341300DE0942 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		BF4760D8298A545C005E4F4A /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		BF4760DA298A5465005E4F4A /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0A4296CF20B00889649 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5EF0A7296CF20B00889649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5EF0A9296CF20B00889649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = FriendSearch;
 			sourceTree = "<group>";
 		};
+		BF4760D7298A5440005E4F4A /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				BF4760D8298A545C005E4F4A /* ChatRoomViewController.swift */,
+				BF4760DA298A5465005E4F4A /* ChatRoomViewModel.swift */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
 		BF5EF09B296CF20B00889649 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 		BF5EF0BC296CF27100889649 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BF4760D7298A5440005E4F4A /* ChatRoom */,
 				BF23D9AE2976330F00DE0942 /* Main */,
 				BF5EF0C6296D057600889649 /* SignIn */,
 				BF5EF0BE296CF44400889649 /* Login */,
@@ -372,6 +386,7 @@
 				BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */,
 				BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */,
 				BF8672A8297776760040EB48 /* FriendSearchViewModel.swift in Sources */,
+				BF4760DB298A5465005E4F4A /* ChatRoomViewModel.swift in Sources */,
 				BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */,
 				BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */,
 				BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */,
@@ -379,6 +394,7 @@
 				BF8672AC29777C930040EB48 /* FriendRepository.swift in Sources */,
 				BFE51024296D2270006CD786 /* SignInRepository.swift in Sources */,
 				BF8672B029778E0E0040EB48 /* User.swift in Sources */,
+				BF4760D9298A545C005E4F4A /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

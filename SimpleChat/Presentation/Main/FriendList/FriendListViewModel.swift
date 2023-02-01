@@ -12,10 +12,13 @@ import RxRelay
 class FriendListViewModel {
     let disposeBag = DisposeBag()
     let friends = BehaviorSubject(value: [User]())
+    let selectedIdx = PublishSubject<Int>()
+    let selectedFriend = PublishSubject<User>()
     
     init(_ repo: FriendRepository = FriendRepository()) {
         repo.getFriends()
             .bind(to: friends)
             .disposed(by: disposeBag)
+        
     }
 }

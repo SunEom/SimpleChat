@@ -39,8 +39,9 @@ struct FriendNetwork {
                         return
                     }
                     
-                    var data = snapshot.value! as! [String: Int]
+                    var data = snapshot.value! as? [String: Int] ?? [:]
                     data = data.filter { $0.value == 1 }
+
                     
                     observer.onNext(data.map { User(uid: $0.key) })
                 });
