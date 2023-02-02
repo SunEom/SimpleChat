@@ -57,8 +57,9 @@ class ChatRoomViewController: UIViewController {
     private func attribute() {
         view.addTapGesture()
         navigationItem.largeTitleDisplayMode = .never
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         view.backgroundColor = .white
+        navigationController?.navigationBar.backgroundColor = .white
         
         
         tableView.backgroundColor = .white
@@ -86,7 +87,7 @@ class ChatRoomViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: inputTextfield.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: inputTextfield.topAnchor, constant: -10),
             
             inputTextfield.heightAnchor.constraint(equalToConstant: 40),
             inputTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),

@@ -13,8 +13,6 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         self.setViewControllers([UINavigationController(rootViewController: FriendListViewController()), FriendSearchViewController()], animated: true)
-        
-        UITabBar.appearance().backgroundColor = .white
     }
     
 }

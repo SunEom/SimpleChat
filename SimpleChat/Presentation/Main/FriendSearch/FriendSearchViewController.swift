@@ -55,12 +55,16 @@ class FriendSearchViewController: UIViewController {
     }
     
     private func attribute() {
+        view.addTapGesture()
         view.backgroundColor = .white
         
+        tableView.backgroundColor = .white
+        
+        searchBar.barTintColor = .white
         searchBar.autocorrectionType = .no
         searchBar.autocapitalizationType = .none
-        searchBar.tintColor = .black
-        
+        searchBar.searchTextField.textColor = .black
+        searchBar.searchTextField.leftView?.tintColor = .black
     }
     
     private func layout() {
