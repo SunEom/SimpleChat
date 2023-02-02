@@ -46,14 +46,23 @@ class ChatRoomViewController: UIViewController {
             })
             .disposed(by: disposeBag)
             
+        vm.chats
+            .observe(on: MainScheduler.instance)
+            .bind(to: tableView.rx.items) { tv, row, msg in
+                return BubbleCell(msg: msg)
+            }
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {
+        view.addTapGesture()
         navigationItem.largeTitleDisplayMode = .never
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         view.backgroundColor = .white
         
+        
         tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         
         inputTextfield.defaultUI()
         inputTextfield.layer.cornerRadius = 20
@@ -64,6 +73,7 @@ class ChatRoomViewController: UIViewController {
         sendBtn.layer.cornerRadius = 20
         sendBtn.setImage(UIImage(systemName: "paperplane"), for: .normal)
         sendBtn.tintColor = .black
+        
     }
     
     private func layout() {
@@ -81,12 +91,12 @@ class ChatRoomViewController: UIViewController {
             inputTextfield.heightAnchor.constraint(equalToConstant: 40),
             inputTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             inputTextfield.trailingAnchor.constraint(equalTo: sendBtn.leadingAnchor, constant: -10),
-            inputTextfield.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            inputTextfield.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             
             sendBtn.heightAnchor.constraint(equalToConstant: 40),
             sendBtn.widthAnchor.constraint(equalToConstant: 40),
             sendBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            sendBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            sendBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             
         ].forEach { $0.isActive = true }
     }
