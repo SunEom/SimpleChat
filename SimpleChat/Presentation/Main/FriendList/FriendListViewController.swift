@@ -34,6 +34,7 @@ class FriendListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         attribute()
+        vm.listRefresh.onNext(Void())
     }
     
     private func bind() {
@@ -61,6 +62,35 @@ class FriendListViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: {
                 self.navigationController?.pushViewController(ChatRoomViewController(ChatRoomViewModel(friend: $0)), animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemDeleted
+            .map { $0.row }
+            .withLatestFrom(vm.friends) { $1[$0] }
+            .subscribe(onNext: { friend in
+                let alert = UIAlertController(title: "알림", message: "\(friend.uid)님을 친구 목록에서 삭제하시겠습니까?", preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "취소", style: .cancel)
+                let delete = UIAlertAction(title: "삭제", style: .destructive) { _ in
+                    self.vm.deleteFriend.onNext(friend)
+                }
+                
+                alert.addAction(cancel)
+                alert.addAction(delete)
+                
+                self.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        vm.deleteFriendResult
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { result in
+                let alert = UIAlertController(title: result.isSuccess ? "성공" : "오류", message: result.msg, preferredStyle: .alert)
+                let confirm = UIAlertAction(title: "확인", style: .default)
+                
+                alert.addAction(confirm)
+                
+                self.present(alert, animated: true)
             })
             .disposed(by: disposeBag)
             

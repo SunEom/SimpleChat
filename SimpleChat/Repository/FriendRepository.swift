@@ -27,4 +27,8 @@ class FriendRepository {
         return network.requestUserList()
             .map { $0.filter{ $0.uid.lowercased().contains(id.lowercased()) } }
     }
+    
+    func deleteFriend(_ user: User) -> Observable<RequestResult> {
+        return network.requestDeleteFriend(user)
+    }
 }

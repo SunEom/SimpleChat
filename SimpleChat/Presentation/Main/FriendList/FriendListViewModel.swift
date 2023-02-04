@@ -14,10 +14,27 @@ class FriendListViewModel {
     let friends = BehaviorSubject(value: [User]())
     let selectedIdx = PublishSubject<Int>()
     let selectedFriend = PublishSubject<User>()
+    let listRefresh = PublishSubject<Void>()
+    let deleteFriend = PublishSubject<User>()
+    let deleteFriendResult = PublishSubject<RequestResult>()
     
     init(_ repo: FriendRepository = FriendRepository()) {
-        repo.getFriends()
-            .bind(to: friends)
+        
+        listRefresh.subscribe(onNext: {
+            repo.getFriends()
+                .bind(to: self.friends)
+                .disposed(by: self.disposeBag)
+        })
+        .disposed(by: disposeBag)
+        
+        deleteFriend
+            .flatMapLatest { repo.deleteFriend($0) }
+            .bind(to: deleteFriendResult)
+            .disposed(by: disposeBag)
+        
+        deleteFriendResult
+            .map { _ in Void() }
+            .bind(to: listRefresh)
             .disposed(by: disposeBag)
         
     }

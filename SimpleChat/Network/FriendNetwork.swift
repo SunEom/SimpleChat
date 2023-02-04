@@ -79,4 +79,19 @@ struct FriendNetwork {
         }
     }
     
+    func requestDeleteFriend(_ user: User) -> Observable<RequestResult> {
+        return Observable.create { observer in
+            if let uid = Auth.auth().currentUser?.uid {
+                Database.database().reference().child("friends/\(uid)/\(user.uid)").removeValue { error, reference in
+                    if let error = error {
+                        observer.onNext(RequestResult(isSuccess: false, msg: error.localizedDescription))
+                    } else {
+                        observer.onNext(RequestResult(isSuccess: true, msg: "정상적으로 삭제되었습니다."))
+                    }
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
 }
