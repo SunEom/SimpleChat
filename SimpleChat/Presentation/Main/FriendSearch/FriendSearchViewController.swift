@@ -52,10 +52,51 @@ class FriendSearchViewController: UIViewController {
                 return cell
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .observe(on: MainScheduler.instance)
+            .map {$0.row}
+            .withLatestFrom(vm.list) { $1[$0] }
+            .subscribe(onNext: {
+                let uid = $0.uid
+                let alert = UIAlertController(title: "친구 추가", message: "\($0.uid)를 추가하시겠습니까?", preferredStyle: .alert)
+                
+                let confirm = UIAlertAction(title: "추가", style: .default) {_ in
+                    self.vm.newFriend.onNext(User(uid: uid))
+                }
+                let cancel = UIAlertAction(title: "취소", style: .default)
+                
+                alert.addAction(confirm)
+                alert.addAction(cancel)
+                
+                self.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: {
+                self.tableView.cellForRow(at: $0)?.isSelected = false
+            })
+            .disposed(by: disposeBag)
+        
+        searchBar.rx.searchButtonClicked
+            .subscribe(onNext: {
+                self.view.endEditing(true)
+            })
+            .disposed(by: disposeBag)
+        
+        vm.AddFriendRequestResult
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { result in
+                let alert = UIAlertController(title: result.isSuccess ? "성공" : "실패", message: result.msg, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                
+                self.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {
-        view.addTapGesture()
         view.backgroundColor = .white
         
         tableView.backgroundColor = .white

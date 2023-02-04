@@ -16,6 +16,8 @@ class FriendSearchViewModel {
     let keyword = BehaviorRelay(value: "")
     let searchBtnTap = PublishRelay<Void>()
     let list = BehaviorSubject(value: [User]())
+    let newFriend = PublishSubject<User>()
+    let AddFriendRequestResult = PublishSubject<RequestResult>()
     
     init(_ repo : FriendRepository = FriendRepository()) {
         searchBtnTap
@@ -23,5 +25,11 @@ class FriendSearchViewModel {
             .flatMapLatest { repo.searchById($0) }
             .bind(to: list)
             .disposed(by: disposeBag)
+        
+        newFriend
+            .flatMapLatest { repo.addNewFriend(fuid: $0.uid)}
+            .bind(to: AddFriendRequestResult)
+            .disposed(by: disposeBag)
+            
     }
 }

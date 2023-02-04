@@ -11,6 +11,10 @@ import RxSwift
 class FriendRepository {
     let network = FriendNetwork()
     
+    func addNewFriend(fuid: String) -> Observable<RequestResult> {
+        return network.requestAddFriend(fuid: fuid)
+    }
+    
     func getAllUser() -> Observable<[User]> {
         return network.requestUserList()
     }
