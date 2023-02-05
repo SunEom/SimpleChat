@@ -11,6 +11,9 @@
 		BF23D9B62976341300DE0942 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B52976341300DE0942 /* FriendListViewController.swift */; };
 		BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */; };
 		BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */; };
+		BF3D9AF1298E26C20061770E /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D9AF0298E26C20061770E /* ChatRepository.swift */; };
+		BF3D9AF3298E271F0061770E /* ChatNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D9AF2298E271F0061770E /* ChatNetwork.swift */; };
+		BF3D9AF5298E2CB00061770E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D9AF4298E2CB00061770E /* Date.swift */; };
 		BF4760D9298A545C005E4F4A /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4760D8298A545C005E4F4A /* ChatRoomViewController.swift */; };
 		BF4760DB298A5465005E4F4A /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4760DA298A5465005E4F4A /* ChatRoomViewModel.swift */; };
 		BF548412298B39C400055487 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF548411298B39C400055487 /* Message.swift */; };
@@ -46,6 +49,9 @@
 		BF23D9B52976341300DE0942 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		BF23D9B929763B0C00DE0942 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		BF3D9AF0298E26C20061770E /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
+		BF3D9AF2298E271F0061770E /* ChatNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetwork.swift; sourceTree = "<group>"; };
+		BF3D9AF4298E2CB00061770E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BF4760D8298A545C005E4F4A /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		BF4760DA298A5465005E4F4A /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
 		BF548411298B39C400055487 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 			children = (
 				BF5EF0C4296CF68B00889649 /* TextField.swift */,
 				BFE5101D296D1569006CD786 /* UiView.swift */,
+				BF3D9AF4298E2CB00061770E /* Date.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 				BFE51023296D2270006CD786 /* SignInRepository.swift */,
 				BF97D7F92970FF9700067222 /* LogInRepository.swift */,
 				BF8672AB29777C930040EB48 /* FriendRepository.swift */,
+				BF3D9AF0298E26C20061770E /* ChatRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				BFE51026296D2590006CD786 /* SignInNetwork.swift */,
 				BF97D7FB2970FFF500067222 /* LoginNetwork.swift */,
 				BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */,
+				BF3D9AF2298E271F0061770E /* ChatNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -393,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */,
+				BF3D9AF5298E2CB00061770E /* Date.swift in Sources */,
 				BFE5101E296D1569006CD786 /* UiView.swift in Sources */,
+				BF3D9AF3298E271F0061770E /* ChatNetwork.swift in Sources */,
 				BF5EF0CA296D059600889649 /* SignInViewController.swift in Sources */,
 				BF5EF0C5296CF68B00889649 /* TextField.swift in Sources */,
 				BFE51021296D2173006CD786 /* RequestResult.swift in Sources */,
@@ -407,6 +418,7 @@
 				BF23D9B22976339D00DE0942 /* MainViewController.swift in Sources */,
 				BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */,
 				BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */,
+				BF3D9AF1298E26C20061770E /* ChatRepository.swift in Sources */,
 				BF8672A8297776760040EB48 /* FriendSearchViewModel.swift in Sources */,
 				BF4760DB298A5465005E4F4A /* ChatRoomViewModel.swift in Sources */,
 				BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */,

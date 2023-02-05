@@ -8,7 +8,13 @@
 import Foundation
 
 struct Message {
-    let uid: String
+    let to: String
+    let from: String
     let contents: String
-    let date: Date
+    let date: String
+
+    var toDictionary: [String: String?] {
+        let dict: [String: String] = ["to": to, "from": from, "contents" : contents, "date" : date]
+        return dict
+    }
 }

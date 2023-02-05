@@ -16,6 +16,7 @@ class LoginViewModel {
     let emailData = BehaviorRelay(value: "")
     let pwdData = BehaviorRelay(value: "")
     let loginBtnTap = PublishRelay<Void>()
+    let loginCheckRequest = PublishSubject<Void>()
     let loginResult = PublishSubject<RequestResult>()
 
     init(_ repo: LoginRepository = LoginRepository()) {
@@ -23,6 +24,15 @@ class LoginViewModel {
             .withLatestFrom(Observable.combineLatest(self.emailData, self.pwdData))
             .map { repo.loginRequest(email: $0, pwd: $1 )}
             .flatMapLatest{ $0 }
+            .bind(to: loginResult)
+            .disposed(by: disposeBag)
+        
+        loginCheckRequest
+            .map { Auth.auth().currentUser != nil ? true : false }
+            .filter { $0 }
+            .map { islogined in
+                return RequestResult(isSuccess: islogined, msg: "")
+            }
             .bind(to: loginResult)
             .disposed(by: disposeBag)
     }
