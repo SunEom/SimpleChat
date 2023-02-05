@@ -22,6 +22,7 @@ class FriendListViewModel {
         
         listRefresh.subscribe(onNext: {
             repo.getFriends()
+                .map { $0.sorted { $0.uid < $1.uid }}
                 .bind(to: self.friends)
                 .disposed(by: self.disposeBag)
         })
