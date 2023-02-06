@@ -8,15 +8,19 @@
 import Foundation
 import RxSwift
 
-struct LoginRepository {
+struct UserRepository {
     
-    let network = LoginNetwork()
+    let network = UserNetwork()
     
-    func loginRequest(email: String, pwd: String) -> Observable<RequestResult> {
+    func login(email: String, pwd: String) -> Observable<RequestResult> {
         if let result = validate(email, pwd) {
             return Observable.just(result)
         }
         return network.requestLogin(email: email, pwd: pwd)
+    }
+    
+    func logout() -> Observable<RequestResult> {
+        return network.requestLogout()
     }
     
     private func validate(_ email: String, _ pwd: String) -> RequestResult? {

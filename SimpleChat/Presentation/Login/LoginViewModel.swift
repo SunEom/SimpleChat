@@ -19,10 +19,10 @@ class LoginViewModel {
     let loginCheckRequest = PublishSubject<Void>()
     let loginResult = PublishSubject<RequestResult>()
 
-    init(_ repo: LoginRepository = LoginRepository()) {
+    init(_ repo: UserRepository = UserRepository()) {
         loginBtnTap
             .withLatestFrom(Observable.combineLatest(self.emailData, self.pwdData))
-            .map { repo.loginRequest(email: $0, pwd: $1 )}
+            .map { repo.login(email: $0, pwd: $1 )}
             .flatMapLatest{ $0 }
             .bind(to: loginResult)
             .disposed(by: disposeBag)

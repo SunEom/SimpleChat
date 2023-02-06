@@ -33,13 +33,15 @@
 		BF8672AC29777C930040EB48 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AB29777C930040EB48 /* FriendRepository.swift */; };
 		BF8672AE29777D2B0040EB48 /* FriendNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */; };
 		BF8672B029778E0E0040EB48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8672AF29778E0E0040EB48 /* User.swift */; };
-		BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7F92970FF9700067222 /* LogInRepository.swift */; };
-		BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7FB2970FFF500067222 /* LoginNetwork.swift */; };
+		BF8986D72990D647007133ED /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8986D62990D647007133ED /* SettingViewModel.swift */; };
+		BF8986D92990D68F007133ED /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8986D82990D68F007133ED /* SettingViewController.swift */; };
+		BF97D7FA2970FF9700067222 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7F92970FF9700067222 /* UserRepository.swift */; };
+		BF97D7FC2970FFF500067222 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97D7FB2970FFF500067222 /* UserNetwork.swift */; };
 		BFE5101B296D1341006CD786 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE5101A296D1341006CD786 /* GoogleService-Info.plist */; };
 		BFE5101E296D1569006CD786 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5101D296D1569006CD786 /* UiView.swift */; };
 		BFE51021296D2173006CD786 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51020296D2173006CD786 /* RequestResult.swift */; };
-		BFE51024296D2270006CD786 /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51023296D2270006CD786 /* SignInRepository.swift */; };
-		BFE51027296D2590006CD786 /* SignInNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51026296D2590006CD786 /* SignInNetwork.swift */; };
+		BFE51024296D2270006CD786 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51023296D2270006CD786 /* AccountRepository.swift */; };
+		BFE51027296D2590006CD786 /* AccountNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51026296D2590006CD786 /* AccountNetwork.swift */; };
 		DA9C606EC222CFBB2F35CAD3 /* Pods_SimpleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,14 +75,16 @@
 		BF8672AB29777C930040EB48 /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendNetwork.swift; sourceTree = "<group>"; };
 		BF8672AF29778E0E0040EB48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BF97D7F92970FF9700067222 /* LogInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRepository.swift; sourceTree = "<group>"; };
-		BF97D7FB2970FFF500067222 /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
+		BF8986D62990D647007133ED /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		BF8986D82990D68F007133ED /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BF97D7F92970FF9700067222 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		BF97D7FB2970FFF500067222 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		BFE5101A296D1341006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFE5101C296D134D006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFE5101D296D1569006CD786 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
 		BFE51020296D2173006CD786 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
-		BFE51023296D2270006CD786 /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
-		BFE51026296D2590006CD786 /* SignInNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNetwork.swift; sourceTree = "<group>"; };
+		BFE51023296D2270006CD786 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		BFE51026296D2590006CD786 /* AccountNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNetwork.swift; sourceTree = "<group>"; };
 		D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB501C5F324756389C27502 /* Pods-SimpleChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +213,7 @@
 		BF5EF0BC296CF27100889649 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BF8986D52990D63E007133ED /* Setting */,
 				BF4760D7298A5440005E4F4A /* ChatRoom */,
 				BF23D9AE2976330F00DE0942 /* Main */,
 				BF5EF0C6296D057600889649 /* SignIn */,
@@ -254,6 +259,15 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		BF8986D52990D63E007133ED /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BF8986D62990D647007133ED /* SettingViewModel.swift */,
+				BF8986D82990D68F007133ED /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		BFE5101F296D2167006CD786 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,8 +281,8 @@
 		BFE51022296D225B006CD786 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				BFE51023296D2270006CD786 /* SignInRepository.swift */,
-				BF97D7F92970FF9700067222 /* LogInRepository.swift */,
+				BFE51023296D2270006CD786 /* AccountRepository.swift */,
+				BF97D7F92970FF9700067222 /* UserRepository.swift */,
 				BF8672AB29777C930040EB48 /* FriendRepository.swift */,
 				BF3D9AF0298E26C20061770E /* ChatRepository.swift */,
 			);
@@ -278,8 +292,8 @@
 		BFE51025296D2580006CD786 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BFE51026296D2590006CD786 /* SignInNetwork.swift */,
-				BF97D7FB2970FFF500067222 /* LoginNetwork.swift */,
+				BFE51026296D2590006CD786 /* AccountNetwork.swift */,
+				BF97D7FB2970FFF500067222 /* UserNetwork.swift */,
 				BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */,
 				BF3D9AF2298E271F0061770E /* ChatNetwork.swift */,
 			);
@@ -402,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF23D9B82976341F00DE0942 /* FriendSearchViewController.swift in Sources */,
+				BF8986D72990D647007133ED /* SettingViewModel.swift in Sources */,
 				BF3D9AF5298E2CB00061770E /* Date.swift in Sources */,
 				BFE5101E296D1569006CD786 /* UiView.swift in Sources */,
 				BF3D9AF3298E271F0061770E /* ChatNetwork.swift in Sources */,
@@ -411,23 +426,24 @@
 				BF5EF0C2296CF57000889649 /* LoginViewModel.swift in Sources */,
 				BF23D9B62976341300DE0942 /* FriendListViewController.swift in Sources */,
 				BF548415298B3A3A00055487 /* BubbleViewModel.swift in Sources */,
-				BF97D7FA2970FF9700067222 /* LogInRepository.swift in Sources */,
+				BF97D7FA2970FF9700067222 /* UserRepository.swift in Sources */,
 				BF8672AE29777D2B0040EB48 /* FriendNetwork.swift in Sources */,
-				BFE51027296D2590006CD786 /* SignInNetwork.swift in Sources */,
+				BFE51027296D2590006CD786 /* AccountNetwork.swift in Sources */,
 				BF548417298B3A4F00055487 /* BubbleCell.swift in Sources */,
 				BF23D9B22976339D00DE0942 /* MainViewController.swift in Sources */,
 				BF5EF0C8296D058200889649 /* SignInViewModel.swift in Sources */,
 				BF23D9BA29763B0C00DE0942 /* FriendListViewModel.swift in Sources */,
 				BF3D9AF1298E26C20061770E /* ChatRepository.swift in Sources */,
+				BF8986D92990D68F007133ED /* SettingViewController.swift in Sources */,
 				BF8672A8297776760040EB48 /* FriendSearchViewModel.swift in Sources */,
 				BF4760DB298A5465005E4F4A /* ChatRoomViewModel.swift in Sources */,
-				BF97D7FC2970FFF500067222 /* LoginNetwork.swift in Sources */,
+				BF97D7FC2970FFF500067222 /* UserNetwork.swift in Sources */,
 				BF5EF0C0296CF45400889649 /* LoginViewController.swift in Sources */,
 				BF5EF0A8296CF20B00889649 /* AppDelegate.swift in Sources */,
 				BF548419298B3AFB00055487 /* Constant.swift in Sources */,
 				BF5EF0AA296CF20B00889649 /* SceneDelegate.swift in Sources */,
 				BF8672AC29777C930040EB48 /* FriendRepository.swift in Sources */,
-				BFE51024296D2270006CD786 /* SignInRepository.swift in Sources */,
+				BFE51024296D2270006CD786 /* AccountRepository.swift in Sources */,
 				BF548412298B39C400055487 /* Message.swift in Sources */,
 				BF8672B029778E0E0040EB48 /* User.swift in Sources */,
 				BF4760D9298A545C005E4F4A /* ChatRoomViewController.swift in Sources */,

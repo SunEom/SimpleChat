@@ -15,6 +15,7 @@ class FriendSearchViewController: UIViewController {
     var vm: FriendSearchViewModel!
     let searchBar = UISearchBar()
     let tableView = UITableView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +102,7 @@ class FriendSearchViewController: UIViewController {
     private func attribute() {
         view.backgroundColor = .white
         view.addTapGesture()
+    
         tableView.backgroundColor = .white
         
         searchBar.barTintColor = .white

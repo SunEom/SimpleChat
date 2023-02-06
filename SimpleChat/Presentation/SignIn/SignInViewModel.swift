@@ -23,7 +23,7 @@ class SignInViewModel {
     
     let requestResult = PublishSubject<RequestResult>()
     
-    init(_ repo: SignInRepository = SignInRepository()) {
+    init(_ repo: AccountRepository = AccountRepository()) {
         saveBtnTap
             .map { self.loading.onNext(true) }
             .withLatestFrom(Observable.combineLatest(emailData, pwdData, checkData))

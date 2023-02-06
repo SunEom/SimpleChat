@@ -9,8 +9,8 @@ import Foundation
 import FirebaseAuth
 import RxSwift
 
-struct SignInRepository {
-    private let network = SignInNetwork()
+struct AccountRepository {
+    private let network = AccountNetwork()
     
     func requestSignIn(_ email: String, _ pwd: String, _ check: String) -> Observable<RequestResult> {
         if let validateResult = validate(email, pwd, check) {
@@ -19,6 +19,10 @@ struct SignInRepository {
     
         return network.requestJoin(email: email, pwd: pwd)
     }
+    
+//    func deleteAccount() ->Observable<RequestResult> {
+//        return network.requestDeleteAccount()
+//    }
     
     private func validate(_ email: String, _ pwd: String, _ check: String) -> RequestResult? {
         if pwd != check {

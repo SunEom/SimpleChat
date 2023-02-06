@@ -14,6 +14,7 @@ class FriendListViewController: UIViewController {
     var vm: FriendListViewModel!
     let disposeBag = DisposeBag()
     let tableView = UITableView()
+    let settingButton = UIBarButtonItem()
     
     init () {
         super.init(nibName: nil, bundle: nil)
@@ -93,6 +94,13 @@ class FriendListViewController: UIViewController {
                 self.present(alert, animated: true)
             })
             .disposed(by: disposeBag)
+        
+        settingButton.rx.tap
+            .asDriver()
+            .drive(onNext: {
+                self.navigationController?.pushViewController(SettingViewController(SettingViewModel()), animated: true)
+            })
+            .disposed(by: disposeBag)
             
     }
     
@@ -101,6 +109,11 @@ class FriendListViewController: UIViewController {
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         view.backgroundColor = .white
         self.navigationItem.title = "Friends"
+        
+        settingButton.image = UIImage(systemName: "gearshape")
+        settingButton.tintColor = .black
+        navigationItem.rightBarButtonItem = settingButton
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.backgroundColor = .white
     }

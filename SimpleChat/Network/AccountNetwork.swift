@@ -2,8 +2,9 @@ import Foundation
 import RxSwift
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseCore
 
-struct SignInNetwork {
+struct AccountNetwork {
     let session = URLSession.shared
     
     func requestJoin(email: String, pwd: String) -> Observable<RequestResult> {
@@ -29,4 +30,8 @@ struct SignInNetwork {
         }
         
     }
+    
+//    func requestDeleteAccount() -> Observable<RequestResult> {
+//        
+//    }
 }
