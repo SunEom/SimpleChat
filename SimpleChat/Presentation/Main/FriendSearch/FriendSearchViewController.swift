@@ -48,7 +48,9 @@ class FriendSearchViewController: UIViewController {
         vm.list
             .bind(to: tableView.rx.items) { tv, row, item in
                 let cell = UITableViewCell()
+                cell.backgroundColor = .white
                 cell.textLabel?.text = item.uid
+                cell.textLabel?.textColor = .black
                 return cell
             }
             .disposed(by: disposeBag)
@@ -98,7 +100,7 @@ class FriendSearchViewController: UIViewController {
     
     private func attribute() {
         view.backgroundColor = .white
-        
+        view.addTapGesture()
         tableView.backgroundColor = .white
         
         searchBar.barTintColor = .white
