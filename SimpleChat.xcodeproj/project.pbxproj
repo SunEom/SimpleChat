@@ -113,8 +113,8 @@
 		BF23D9AE2976330F00DE0942 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BF23D9B4297633FE00DE0942 /* FriendSearch */,
 				BF23D9B3297633ED00DE0942 /* FriendList */,
+				BF23D9B4297633FE00DE0942 /* FriendSearch */,
 				BF23D9B12976339D00DE0942 /* MainViewController.swift */,
 			);
 			path = Main;
