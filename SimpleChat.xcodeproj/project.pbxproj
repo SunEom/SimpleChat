@@ -42,11 +42,12 @@
 		BFE51021296D2173006CD786 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51020296D2173006CD786 /* RequestResult.swift */; };
 		BFE51024296D2270006CD786 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51023296D2270006CD786 /* AccountRepository.swift */; };
 		BFE51027296D2590006CD786 /* AccountNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE51026296D2590006CD786 /* AccountNetwork.swift */; };
-		DA9C606EC222CFBB2F35CAD3 /* Pods_SimpleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */; };
+		C487797E211166A44FDFC037 /* Pods_SimpleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A54CEDC36E312BB29837AAD /* Pods_SimpleChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.release.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.release.xcconfig"; sourceTree = "<group>"; };
+		9A54CEDC36E312BB29837AAD /* Pods_SimpleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF23D9B12976339D00DE0942 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF23D9B52976341300DE0942 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		BF23D9B72976341F00DE0942 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		BF5EF0C4296CF68B00889649 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BF5EF0C7296D058200889649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		BF5EF0C9296D059600889649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BF851BA229A097B900260547 /* SimpleChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleChat.entitlements; sourceTree = "<group>"; };
 		BF8672A7297776760040EB48 /* FriendSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSearchViewModel.swift; sourceTree = "<group>"; };
 		BF8672AB29777C930040EB48 /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		BF8672AD29777D2B0040EB48 /* FriendNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendNetwork.swift; sourceTree = "<group>"; };
@@ -80,12 +82,10 @@
 		BF97D7F92970FF9700067222 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		BF97D7FB2970FFF500067222 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		BFE5101A296D1341006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BFE5101C296D134D006CD786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFE5101D296D1569006CD786 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
 		BFE51020296D2173006CD786 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		BFE51023296D2270006CD786 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		BFE51026296D2590006CD786 /* AccountNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNetwork.swift; sourceTree = "<group>"; };
-		D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB501C5F324756389C27502 /* Pods-SimpleChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9C606EC222CFBB2F35CAD3 /* Pods_SimpleChat.framework in Frameworks */,
+				C487797E211166A44FDFC037 /* Pods_SimpleChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,14 +108,6 @@
 				5ACB215A547709F15AAB11CF /* Pods-SimpleChat.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B610FAC6BF0BC3245118FDD3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D060CE4CA0A3CE3758F4A4DD /* Pods_SimpleChat.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BF23D9AE2976330F00DE0942 /* Main */ = {
@@ -171,7 +163,7 @@
 				BF5EF0A6296CF20B00889649 /* SimpleChat */,
 				BF5EF0A5296CF20B00889649 /* Products */,
 				1A989E9DC9127ACBEFD0FBC9 /* Pods */,
-				B610FAC6BF0BC3245118FDD3 /* Frameworks */,
+				E545540DD9D68FE331555881 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +178,7 @@
 		BF5EF0A6296CF20B00889649 /* SimpleChat */ = {
 			isa = PBXGroup;
 			children = (
+				BF851BA229A097B900260547 /* SimpleChat.entitlements */,
 				BFE51025296D2580006CD786 /* Network */,
 				BFE51022296D225B006CD786 /* Repository */,
 				BFE5101F296D2167006CD786 /* Entity */,
@@ -193,7 +186,6 @@
 				BF5EF0BC296CF27100889649 /* Presentation */,
 				BF5EF0C3296CF68200889649 /* Util */,
 				BF5EF0BB296CF26700889649 /* Supporting */,
-				BFE5101C296D134D006CD786 /* GoogleService-Info.plist */,
 			);
 			path = SimpleChat;
 			sourceTree = "<group>";
@@ -298,6 +290,14 @@
 				BF3D9AF2298E271F0061770E /* ChatNetwork.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E545540DD9D68FE331555881 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A54CEDC36E312BB29837AAD /* Pods_SimpleChat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,6 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleChat/SimpleChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KB3R84Q4BQ;
@@ -612,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleChat/SimpleChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KB3R84Q4BQ;
